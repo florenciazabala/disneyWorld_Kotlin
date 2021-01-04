@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo ingreso</title>
+    <link rel="shortcut icon" href="images/iconP.svg" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!--VÍNCULOS INTERNOS-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="formulario">
+    <div class="d-flex" id="wrapper">
+        <!--Carga externa del sidebar-->
+        <div id="menuCarga"></div>
+        <div id="page-content-wrapper">
+            <!--Carga externa del navbar-->
+            <div class="container" id="navCarga"></div>
+            <!--INICIO DEL FORMULARIO-->
+            <div class="container" id="boxP">
+                <div class="row justify-content-center">
+                    <div class="col-11 mt-3">
+                        
+                            <h1 class="tituloPrincipal">Nuevo ingreso</h1>
+                            <!--Datos institucionales-->
+                            <form action="#" method="POST" enctype="multipart/form-data">
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                <legend><i class="fas fa-plus-circle" id="icon1" onclick="mostrarOcultar(1)"></i> Datos institucionales</legend></br>
+                                <div class="ocultar" id="ocultar1">
+                                    <div class="row aling-items-center">
+                                            <div class="col-4">
+                                                <label>Número de inventario</br><input type="text" name="numeroInventarioA" id="inputInv1" value="MDLP" required> - <input type="number" name="numeroInventario" class="example-popover" id="inputInv2" data-bs-toggle="popover" title="IMPORTANTE" data-bs-content="El número de inventario deberá ser único e irrepetible y se compondrá de la siguiente forma: Institución-Número según orden de ingreso-Tipología" maxlength="10" required autofocus> - <input type="text" name="numeroInventario" id="inputInv" value="PC" required> </label></br>
+                                                <label>Fecha de ingreso</br> <input type="date" name="fechaIngreso" id="" required> </label></br>
+                                                <label for="#ubicacion">Ubicacion</label></br>
+                                                <select name="ubicacion" id="u">
+                                                    <option value="sala_1" >Sala I</option>
+                                                    <option value="sala_2">Sala II</option>
+                                                    <option value="sala_3">Sala III</option>
+                                                    <option value="sala_4">Sala IV</option>
+                                                    <option value="sala_5">Sala V</option>
+                                                    <option value="sala_6">Sala VI</option>
+                                                    <option value="sala_7">Sala VII</option>
+                                                    <option value="sala_8">Sala VIII</option>
+                                                    <option value="sala_9">Sala IX</option>
+                                                    <option value="sala_10">Sala X</option>
+                                                    <option value="sala_11">Sala XI</option>
+                                                    <option value="sala_12">Sala XII</option>
+                                                    <option value="sala_13">Sala XIII</option>
+                                                    <option value="sala_14">Sala XV</option>
+                                                    <option value="sala_15">Sala XVI</option>
+                                                    <option value="sala_16">Sala XVII</option>
+                                                    <option value="sala_17">Sala XVIII</option>
+                                                </select></br>
+                                                
+                                                <label for="#procedencia">Procedencia</label></br>
+                                                <select name="procedencia" id="procedencia" class="oS">
+                                                    <option value="Donación">Donación</option>
+                                                    <option value="Préstamo">Préstamo</option>
+                                                    <option value="Compra">Compra</option>
+                                                    <option value="Entrega voluntaria">Entrega voluntaria</option>
+                                                    <option value="Salvataje">Salvataje</option>
+                                                    <option value="Incautación">Incautación</option>
+                                                    <option value="Desconocido">Desconocido</option>
+                                                    <option value="otro">Otro</option>
+                                                    <input type="text" name="procedenciOtro" class="otro" maxlength="30">
+                                                </select>
+                                                <label>Propietario</br> <input type="text" name="propietario" id="" maxlength="50" required> </label></br>
+                                                <label>Estado</br>
+                                                    <label><input type="radio" name="estado" value="En exposición" checked> En exposición</label></br>
+                                                    <label><input type="radio" name="estado" value="En despósito"> En despósito</label></br>
+                                                    <label><input type="radio" name="estado" value="En retauración"> En restauración</label></br>
+                                                    <label><input type="radio" name="estado" value="En préstamo"> En préstamo</label></label></br>
+                                                </label>
+                                            </div>
+                                            <div class="col-8">
+                                                <img src="images/plantas/sala_1.svg" id="p" alt="Planta del museo" >
+                                            </div>
+                                    </div>    
+                    
+                                </div>
+                                </fieldset>
+                            
+                               <!--Documentación fotográfica-->
+                            
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                        <legend><i class="fas fa-plus-circle" id="icon2" onclick="mostrarOcultar(2)" ></i> Documentación fotográfica</legend>
+                                        <div class="ocultar" id="ocultar2">
+                                            <label>Imagenes </br>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label class="form-label">Anverso <input type="file" class="form-control" name="imagenDocF_Anverso" id="" required></label></br>
+                                                        <label class="form-label">Reverso <input type="file" class="form-control" name="imagenDocF_Reverso" id=""></label></br>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="form-label">Firma<input type="file" class="form-control" name="imagenDocF_Firma" id=""></label></br>
+                                                        <label class="form-label">Detalles<input type="file" class="form-control" name="imagenDocF_Detalle" id=""></label></br>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                </fieldset>
+                            
+                                <!--Ficha técnica-->
+                            
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                    <legend><i class="fas fa-plus-circle" id="icon3" onclick="mostrarOcultar(3)"></i> Ficha técnica</legend>
+                                    <div class="ocultar" id="ocultar3">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label>Objeto</br> <input type="text" name="objetoFT" id="" maxlength="50" required> </label></br>
+                                                <label>Titulo</br> <input type="text" name="tituloFT" id="" maxlength="50" required> </label></br>
+                                                <label>Autor</br> <input type="text" name="autorFT" id="" maxlength="30" required> </label></br>
+                                                <label>Fecha/ Periodo</br> <input type="text" name="añoPeriodoFT" id="" required> </label></br>
+                                                <label for="tecnica">Técnica </label></br>
+                                                <select name="tecnicaFT" id="tecnica" class="oS">
+                                                    <option value="Oleo">Óleo</option>
+                                                    <option value="Acrílico">Acrílico</option>
+                                                    <option value="Temple">Temple</option>
+                                                    <option value="Acuarela">Acuarela</option>
+                                                    <option value="Temple">Temple</option>
+                                                    <option value="Témpera">Témpera</option>
+                                                    <option value="Guouche">Guouche</option>
+                                                    <option value="Guouche">Encáustica</option>
+                                                    <option value="otro">Otro</option>
+                                                    <input type="text" name="tecnicaFT_otro" class="otro" maxlength="30">
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>Soporte</br> <input type="text" name="soporteFT" id="" maxlength="50" required> </label></br>
+                                                <label>Dimensiones</br> 
+                                                <label>Ancho </br><input type="number" name="dimensionesFT_ancho" id="" required></label></br> 
+                                                <label>Alto </br><input type="number" name="dimensionesFT_ancho" id="" required></label></br> 
+                                                <label>Profundidad </br><input type="number" name="dimensionesFT_profundidad" id=""></label></br> 
+                                            </div>
+                                            <div class="col-4">
+                                                <label>Formato</br> <input type="text" name="formatoFT" id="" maxlength="50" required> </label></br>
+                                                <label>Genero</br> <input type="text" name="generoFT" id="" maxlength="50" required> </label></br>
+                                                <label>Firma</br> <input type="text" name="firmaFT" id="" maxlength="50" required> </label></br>
+                                                <label>Inscripciones</br> <input type="text" name="inscripcionesFT" id="" maxlength="50" required> </label></br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label>Descripcion </br><textarea name="descripcionFT" id="" class="areaGrande"></textarea></label></br>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                            
+                                <!--Estado de conservación-->
+                              
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                    <legend ><i class="fas fa-plus-circle" id="icon4" onclick="mostrarOcultar(4)"></i> Exámen organoléptico- Estado de conservación</legend>
+                                    <div class="ocultar" id="ocultar4">
+                                        <div class="container">
+                                            <div class="row justfy-content-center mb-5">
+                                                <h6>Estado de conservación general</h6>
+                                                <div class="col-4">
+                                                    <label>Estado</br>
+                                                        <label><input type="radio" name="estadoConservacion" value="muy bueno" onclick="e(1)"> Muy bueno</label></br>
+                                                        <label><input type="radio" name="descripcionEC" value="1" checked onclick="e(2)"> Bueno</label></br>
+                                                        <label><input type="radio" name="descripcionEC" value="2" onclick="e(3)"> Regular</label></br>
+                                                        <label><input type="radio" name="descripcionEC" value="3" onclick="e(4)"> Malo</label></br>
+                                                        <label><input type="radio" name="descripcionEC" value="4" onclick="e(5)"> Muy malo</label></label></br>
+                                                    </label>
+                                                    <img src="images/gráfico estratos.svg" alt="Estratos de una pintura" id="estratosP">
+                                                </div>
+                                                <div class="col-8">
+                                                    <div id="infoEstado">
+                                                        <i class="fas fa-info-circle info"></i>
+                                                        <p id="nodo"> 
+                                                            <span> Estado bueno</span></br> El bien presenta algunos síntomas de deterioro, pero la profundidad, extensión e intensidad de su manifestación es de carácter leve y afectan a menos del 50% de su superfcie total. No registra deterioros a nivel de su estructura y/o en sus materiales constitutivos.
+                                                        </p>
+                                                        <p>* De acuerdo a los criterios establecidos por el Centro Nacional de Conservación y Restauración (CNCR)</p>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                        
+        
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="mostrarEstrato(1), cambiarEstrato(1)"></div>
+                                                <label>A- Soporte accesorio </br>
+                                                    
+                                                    <div class="ocultar" id="ocultarEstrato1">
+                                                        <hr>
+                                                        <div class="row justify-content-center mt-3 mb-3">
+                                                            <div class="col-4">
+                                                                <label for="#soporte">Tipo de soporte</label></br>
+                                                                <select name="soporte" id="soporte">
+                                                                    <option value="Bastidor">Bastidor</option>
+                                                                    <option value="Engatillado">Engatillado</option>
+                                                                    <option value="Parilla">Parrilla</option>
+                                                                    <option value="otro">Otro</option>
+                                                                </select> </br>
+                                                                <label for="#material">Material</label></br>
+                                                                <select name="material" id="material">
+                                                                    <option value="madera">Madera</option>
+                                                                    <option value="metal">Metal</option>
+                                                                    <option value="otro">otro</option>
+                                                                </select></br>
+                                                                <label for="">Tipo </br><input type="text" name="" id="" placeholder="Ej: Pino"></label></br>
+                                                                <label for="#posicion">Posición</label></br>
+                                                                <select name="posicion" id="posicion">
+                                                                    <option value="vertical">Vertical</option>
+                                                                    <option value="horizontl">Horizontal</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p>Dimensiones (cm)</p>
+                                                                <label for="">Ancho </br><input type="number" name="" id=""></label></br>
+                                                                <label for="">Alto </br><input type="number" name="" id=""></label></br>
+                                                                <label for="">Profundidad </br><input type="number" name="" id=""></label></br>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label for="">Observaciones </br><textarea name="" id="" class=""></textarea></label>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row justify-content-center mt-3 mb-3">
+                                                            <h6>Estructura</h6>
+                                                            <div class="col-4">
+                                                                <label for="#ensamble">Ensamble</label></br>
+                                                                <select name="ensamble" id="ensamble">
+                                                                    <option value="movil">Móvil</option>
+                                                                    <option value="fijo">Fijo</option>
+                                                                </select></br>
+                                                                <label for="#uniones">Uniones</label></br>
+                                                                <select name="uniones" id="uniones">
+                                                                    <option value="Caja y espiga simple">Caja y espiga simple</option>
+                                                                    <option value="Caja y espiga doble" selected>Caja y espiga doble</option>
+                                                                    <option value="Tope a tope">Tope a tope</option>
+                                                                    <option value="Media madera">A media madera</option>
+                                                                    <option value="Caja abierta">Caja abierta</option>
+                                                                    <option value="Inglete">A Inglete</option>
+                                                                    <option value="otro">Otro</option>
+                                                                </select>
+                                                                <div><img src="images/uniones/Caja y espiga doble.svg" alt="gráfico uniones" id="unionImg"></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p>Componentes:</p>
+                                                                <label for="">N° cabezales</br><input type="number" name="" id=""></label></br>
+                                                                <label for="">N° largueros</br><input type="number" name="" id=""></label></br>
+                                                                <label for="">N° cuñas</br><input type="number" name="" id=""></label></br>
+                                                            </div>
+                                                           
+                                                            <div class="col-4">
+                                                                <label for="#montaje">Montaje</label></br>
+                                                                <select name="montaje" id="montaje">
+                                                                    <option value="">Encastre</option>
+                                                                    <option value="">Tarugos</option>
+                                                                    <option value="">Clavos</option>
+                                                                    <option value="">Tornillos</option>
+                                                                    <option value="">Adhesivo/ encolado</option>
+                                                                    <option value="">Otro</option>
+                                                                </select></br>
+                                                                <label for="#bisel">Bisel</label></br>
+                                                                <select name="bisel" id="bisel">
+                                                                    <option value="">Media caña</option>
+                                                                    <option value="">En ángulo a 45°</option>
+                                                                    <option value="">No posee- recto</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="row justify-content-center mt-3 mb-3">
+                                                            <h6>Estado de conservación</h6>
+                                                            <label for="">Estado:
+                                                                <label for=""><input type="radio" name="Bueno" id=""> Bueno</label>
+                                                                <label for=""><input type="radio" name="Bueno" id=""> Malo</label>
+                                                                <label for=""><input type="radio" name="Bueno" id=""> Regular</label>
+                                                            </label>
+                                                            <div class="col-4">
+                                                                <label for=".describir">Deformaciones</label><input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> 
+                                                                <textarea class="contenido" name=" "></textarea></br>
+                                                                <label>Rajadura</label><input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"><textarea name=""class="contenido"></textarea> </br>
+                                                                <label><input type="checkbox" name="estadoCapaPic"  value="craqueles"> Rotura</label></br>
+                                                                <textarea class="contenido" name=" "></textarea></br>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="desc" value="craqueles"> Faltante</label></br>
+                                                                
+                                                            </div> 
+                                                            <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Merma</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Nudos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Oxido</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Suciedad</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Manchas</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Insectos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Hongos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Otro</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+
+                                                        </div>
+                                                        <hr>
+                                                        
+                                                    </div>
+                                                    
+                                                </label></br>
+                                            </div>
+                                        </div>
+                                        <!--B- SOPORTE PRINCIPAL-->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="mostrarEstrato(2), cambiarEstrato(2)"></div>
+                                                <label>B- Soporte principal</br>
+                                                    <div class="ocultar" id="ocultarEstrato2">
+                                                        <hr>
+                                                        <div class="row justify-content-center space-around mt-3 mb-3">
+                                                            <div class="col-6">
+                                                                <label for="#soporte">Tipo de soporte</label></br>
+                                                                <label for="#materialSP">Material</label></br>
+                                                                <select name="materialSP" id="materialSP">
+                                                                    <option value="Madera" selected>Madera</option>
+                                                                    <option value="Textil">Textil</option>
+                                                                    <option value="otro">otro</option>
+                                                                </select></br>
+                                                                <label for="">Observaciones </br><textarea name="" id="" class=""></textarea></label>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <p>Dimensiones (cm)</p>
+                                                                <label for="">Ancho </br><input type="number" name="" id=""></label></br>
+                                                                <label for="">Alto </br><input type="number" name="" id=""></label></br>
+                                                                <label for="">Profundidad </br><input type="number" name="" id=""></label></br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ocultarEstadoMaterial" id="estadoMaterialM">
+                                                            <hr>
+                                                            <div class="row justify-content-center mt-3 mb-3">
+                                                                <h6>Estructura</h6>
+                                                                <div class="col-6">
+                                                                    <label for="#corteM">Corte de la madera</label></br>
+                                                                    <select name="corte" id="corteM">
+                                                                        <option value="Tangencial" selected>Tangencial</option>
+                                                                        <option value="Transversal">Transversal</option>
+                                                                        <option value="Radial">Radial</option>
+                                                                        <option value="Sin identificar">Sin identificar</option>
+                                                                    </select>
+                                                                    <div><img src="images/cortes/Tangencial.svg" alt="gráfico uniones" id="corteImg"></div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="tipo">Tipo de madera</label></br>
+                                                                    <select name="tipo" id="tipo">
+                                                                        <option value="pino">Pino</option>
+                                                                        <option value="cedro">Cedro</option>
+                                                                        <option value="alamo">Alamo</option>
+                                                                        <option value="roble">Roble</option>
+                                                                        <option value="cerezo">Cerezo</option>
+                                                                        <option value="guatambu">Guatambú</option>
+                                                                        <option value="guatambu">Madera reconstituída- fenólico</option>
+                                                                        <option value="guatambu">Madera reconstituída- aglomerado</option>
+                                                                        <option value="sin información">Sin información</option>
+                                                                        <option value="otro">Otro</option>
+                                                                    </select></br>
+                                                                    <label for="#ensamble">Cantidad de paneles: </br><input type="number" name="" id=""></label></label></br>
+                                                                    <label for="#unionesT">Uniones</label></br>
+                                                                    <select name="unionesT" id="unionesT">
+                                                                        <option value="Caja y espiga simple">Tarugos</option>
+                                                                        <option value="Caja y espiga doble" selected>Cola de milano</option>
+                                                                        <option value="Tope a tope">Toledanas</option>
+                                                                        <option value="Media madera">Grapas</option>
+                                                                        <option value="Caja abierta">Embarrotado</option>
+                                                                        <option value="Inglete">Unión viva</option>
+                                                                        <option value="otro"></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row">
+                                                                <h6>Estado de conservación</h6>
+                                                                <label for="">Estado:
+                                                                    <label for=""><input type="radio" name="Bueno" id=""> Bueno</label>
+                                                                    <label for=""><input type="radio" name="Bueno" id=""> Malo</label>
+                                                                    <label for=""><input type="radio" name="Bueno" id=""> Regular</label>
+                                                                </label>
+                                                                <div class="col-4">
+                                                                    <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Deformaciones</label></br>
+                                                                    <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Rotura</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Faltante</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Merma</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Alabeo cóncavo</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Fragilidad</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Oxidación</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Suciedad</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Manchas</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Adherencias</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Hongos</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Otro</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="ocultarEstadoMaterial" id="estadoMaterialT">
+                                                            <hr>
+                                                            <div class="row justify-content-center mt-3 mb-3">
+                                                                <h6>Estructura</h6>
+                                                                <div class="col-4">
+                                                                    <label for="tipo">Tipo de textil</label></br>
+                                                                    <select name="tipo" id="tipo">
+                                                                        <option value="Algodón">Algodón</option>
+                                                                        <option value="Liencillo">Liencillo</option>
+                                                                        <option value="Lino">Lino</option>
+                                                                        <option value="Cáñamo">Cáñamo</option>
+                                                                        <option value="Arpillera">Arpillera</option>
+                                                                        <option value="Sintético">Sintético</option>
+                                                                        <option value="sin información">Sin información</option>
+                                                                        <option value="otro">Otro</option>
+                                                                    </select></br>
+                                                                    <label for="#trama">Ligamento</label></br>
+                                                                    <select name="trama" id="trama">
+                                                                        <option value="Tafetan" selected>Tafetán</option>
+                                                                        <option value="Sarga">Sarga</option>
+                                                                        <option value="TR">Raso</option>
+                                                                        <option value="Sin identificar">Sin identificar</option>
+                                                                        <option value="Otro">Sin identificar</option>
+                                                                    </select>
+                                                                    <div><img src="images/tejidos/Tafetan.svg" alt="gráfico tejidos" id="tejidoImg"></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                
+                                                                     <p>Densidad (Hilos x cm2)</p>
+                                                                     <label>Trama </br><input type="number" name="" id=""></label></br>
+                                                                     <label>Urdimbre </br><input type="number" name="" id=""></label></br>     
+                                                                    <label for="#montajeB">Montaje del textil al bastidor</label></br>
+                                                                    
+                                                                    
+                                                                    <select name="montajeB" id="montajeB">
+                                                                        <option value="Tachuelas">Tachuelas</option>
+                                                                        <option value="Clavos" selected>Clavos</option>
+                                                                        <option value="Grapas">Grapas</option>
+                                                                        <option value="Grapas">Ojal y tanza</option>
+                                                                        <option value="Grapas">Remaches</option>
+                                                                        <option value="otro"></option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <label for="#posicionU">Posición de la urdimbre</label>
+                                                                    <select name="posicionU" id="posicionU">
+                                                                        <option value="Vertical">Vertical</option>
+                                                                        <option value="Horizontal">Horizontal</option>
+                                                                        <option value="Diagonal">Diagonal- fuera de escuadra</option>
+                                                                        <option value="Sin identificar">Sin identificar</option>
+                                                                    </select>
+                                                                    <div class="row justify-content-center aling-items-center">
+                                                                        <div class="col-8">
+                                                                            <p>Torsión de los hilos</p>
+                                                                            <label for="#torsionT">Trama</label></br>
+                                                                            <select name="torsionT" id="torsionT">
+                                                                                <option value="S" selected>En "S"</option>
+                                                                                <option value="Z">En "Z"</option>
+                                                                                <option value="Sin identificar">Sin identificar</option>
+                                                                            </select></br>
+                                                                            <label for="#torsionU">Urdimbre</label></br>
+                                                                            <select name="torsionU" id="torsionU">
+                                                                                <option value="S" selected>En "S"</option>
+                                                                                <option value="Z">En "Z"</option>
+                                                                                <option value="Sin identificar">Sin identificar</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <img src="images/tejidos/S.svg" alt="" id="torsionImg">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row">
+                                                                <h6>Estado de conservación</h6>
+                                                                <label for="">Estado:
+                                                                    <label for=""><input type="radio" name="Bueno" id=""> Bueno</label>
+                                                                    <label for=""><input type="radio" name="Bueno" id=""> Malo</label>
+                                                                    <label for=""><input type="radio" name="Bueno" id=""> Regular</label>
+                                                                </label>
+                                                                <div class="col-4">
+                                                                    <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Deformaciones</label></br>
+                                                                    <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Rotura</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Faltante</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Merma</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Fragilidad</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Oxidación</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Corrosión</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Suciedad</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Manchas</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Adherencias</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Hongos</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                    <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Otro</label></br>
+                                                                    <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <hr>
+                                                        
+                                                        
+                                                    </div>
+                                                </label></br>
+                                            </div>
+                                        </div>
+                                        <!--C- CAPA DE IMPRIMACIÓN-->
+                                        <div class="row">  
+                                            <div class="col-12">
+                                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="mostrarEstrato(3), cambiarEstrato(3)"></div>
+                                                <label>C- Capa de imprimación/ preparación</br>
+                                                    <div class="ocultar" id="ocultarEstrato3">
+                                                       <hr>
+                                                       <div class="row">
+                                                          <h6>Estructura</h6>
+                                                           <div class="col-4">
+                                                                <label for="#acabado">Acabado</label></br>
+                                                                <select name="acabado" id="acabado">
+                                                                    <option value="">Liso</option>
+                                                                    <option value="">Texturado</option>
+                                                                    <option value="">Sin datos</option>
+                                                                </select></br>
+                                                                <label for="tipoI">Tipo de imprimación</label></br>
+                                                                <select name="tipoI" id="TipoI">
+                                                                    <option value="Magra">Magra</option>
+                                                                    <option value="Grasa">Grasa</option>
+                                                                    <option value="Mixta">Mixta</option>
+                                                                    <option value="Sin datos">Sin datos</option>
+                                                                </select></br>
+                                                                <label for="#manufactura">Manufactura</label></br>
+                                                                <select name="manufactura" id="manufactura">
+                                                                    <option value="Artesanal">Artesanal</option>
+                                                                    <option value="Industrial">Industrial</option>
+                                                                    <option value="Sin identisicar">Sin identificar</option>
+                                                                </select>
+                                                           </div>
+                                                           <div class="col-4">
+                                                                <label for="#tipoI">Carga</label></br>
+                                                                <select name="tipoI" id="TipoI">
+                                                                    <option value="">Carbonato de calcio</option>
+                                                                    <option value="">Tiza</option>
+                                                                    <option value="">Pigmento</option>
+                                                                    <option value="">Sin datos</option>
+                                                                </select></br>
+                                                                <label for="#aglutinante">Aglutinante</label></br>
+                                                                <select name="aglutinante" id="aglutinante">
+                                                                    <option value="Artesanal">Orgánica- Cola animal</option>
+                                                                    <option value="Industrial">Orgánica Huevo</option>
+                                                                    <option value="Sin identisicar">Sin identificar</option>
+                                                                </select>
+                                                           </div>
+                                                           <div class="col-4">
+                                                                <label>Color </br><input type="text" name="" id=""></label></br>
+                                                                <label>Apariencia </br><textarea name="" id="" ></textarea></label>
+                                                           </div>
+                                                           
+                                                           
+                                                        </div>
+                                                        <hr>
+                                                       <div class="row justify-content-center">
+                                                            <h6>Estado de conservación</h6>
+                                                            <label for="">Estado:
+                                                                <label for=""><input type="radio" name="Bueno" id=""> Bueno</label>
+                                                                <label for=""><input type="radio" name="Bueno" id=""> Malo</label>
+                                                                <label for=""><input type="radio" name="Bueno" id=""> Regular</label>
+                                                            </label>
+                                                            <div class="col-4">
+                                                                <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Disgregación</label></br>
+                                                                <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Anclaje</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Cohesión</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Fragilidad</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Grietas</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Suciedad</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Manchas</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Hongos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Otro</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                </label></br>
+                                            </div>
+                                        </div>
+                                        <!--D- Capa pictorica-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault estratoD" onclick="mostrarEstrato(4), cambiarEstrato(4)"></div>
+                                                <label>D- Capa pictórica</br>
+                                                    <div class="ocultar" id="ocultarEstrato4">
+                                                        <hr>
+                                                        <div class="row">
+                                                            <h6>Estructura</h6>
+                                                            <div class="col-4">
+                                                                <label for="tecnicaCP">Técnica</label></br>
+                                                                <select name="tecnicaCP" id="tecnicaCP">
+                                                                    <option value="">Oleo</option>
+                                                                    <option value="">Acrílico</option>
+                                                                    <option value="">Temple</option>
+                                                                    <option value="">Otro</option>
+                                                                </select></br>
+                                                                <label for="aglutinanteCP">Aglutinante</label></br>
+                                                                <select name="aglutinanteCP" id="aglutinanteCP">
+                                                                    <option value="">Orgánico -cola animal</option>
+                                                                    <option value="">Orgánico- clara de huevo</option>
+                                                                    <option value="">Polímero sintético</option>
+                                                                    <option value="">otro</option>
+                                                                </select></br>
+                                                                <p>Carga: </p>
+                                                                <label ><input type="radio" name="carga" value="si" id=""> Si</label>
+                                                                <label ><input type="radio" name="carga" value="si" id="" checked> No</label>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label for="espesorCP">Espesor</label></br>
+                                                                <select name="espesorCP" id="espesorCP">
+                                                                    <option value="" selected>Medio</option>
+                                                                    <option value="">Fino</option>
+                                                                    <option value="">Grueso</option>
+                                                                </select></br>
+                                                                <label for="texturaCP">Textura</label></br>
+                                                                <select name="texturaCP" id="texturaCP">
+                                                                    <option value="" selected>Lisa</option>
+                                                                    <option value="">Rugosa- impronta del pincel</option>
+                                                                    <option value="">Collage</option>
+                                                                    <option value="">Inclusion</option>
+                                                                    <option value="">Otro</option>
+                                                                </select></br>
+                                                                <label for="armoniaCP">Armonía- paleta de color</label></br>
+                                                                <select name="armoniaCP" id="armoniaCP">
+                                                                    <option value="" selected>Ocres/ tierra</option>
+                                                                    <option value="">Pastel</option>
+                                                                    <option value="">Grises</option>
+                                                                    <option value="">Grises de color</option>
+                                                                    <option value="">Cálida</option>
+                                                                    <option value="">Fría</option>
+                                                                    <option value="">Primarios</option>
+                                                                    <option value="">Secundarios</option>
+                                                                    <option value="">Pares complementarios</option>
+                                                                    <option value="">Otro</option>
+                                                                </select></br>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label for="observacionesCP">Observaciones</label></br>
+                                                                <textarea name="" id=""></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <h6>Estado de conservación</h6>
+                                                        <label for="">Estado:
+                                                            <label for=""><input type="radio" name="Bueno" id=""> Bueno</label>
+                                                            <label for=""><input type="radio" name="Bueno" id=""> Malo</label>
+                                                            <label for=""><input type="radio" name="Bueno" id=""> Regular</label>
+                                                        </label>
+                                                        <div class="row">
+                                                           <div class="col-4">
+                                                                <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Anclaje</label></br>
+                                                                <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Cohesión</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Craqueles</label></br>
+                                                                <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Disgregación</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                           </div>
+                                                           <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Cazoletas</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Desprencimientos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Grietas</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Repintes</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                           </div>
+                                                           <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Alteración cromática</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> suciedad superficial</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Actividad biológica</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Otros</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                           </div>
+                                                        </div>
+                                                        <hr>
+                                                       
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!--E- Tegumento-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="mostrarEstrato(5), cambiarEstrato(5)"></div>
+                                                <label>E- Tegumento protector (Barniz)</br>
+                                                    <div class="ocultar" id="ocultarEstrato5">
+                                                        <hr>
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                               <label for="materialT">Material</label></br>
+                                                               <select name="materialT" id="materialT">
+                                                                   <option value="">Resina natural -dammar</option>
+                                                                   <option value="">Resina natural -colofonia</option>
+                                                                   <option value="">Laca sintética</option>
+                                                                   <option value="">Goma laca</option>
+                                                                   <option value="">Cera sintética- microcistralina</option>
+                                                                   <option value="">Cera natural- de abejas</option>
+                                                                   <option value="">Parafina</option>
+                                                                   <option value="">Otro</option>
+                                                               </select>
+                                                               <label for="aplicacionT">Forma de aplicación</label>
+                                                               <select name="aplicacionT" id="aplicacionT">
+                                                                   <option value="">Pincel</option>
+                                                                   <option value="">Aerógrafo</option>
+                                                                   <option value="">Aerosol</option>
+                                                                   <option value="">Rodillo</option>
+                                                                   <option value="">Otro</option>
+                                                               </select>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label for="espesorT">Espesor</label></br>
+                                                                <select name="espesorT" id="espesorT">
+                                                                    <option value="" selected>Medio</option>
+                                                                    <option value="">Fino</option>
+                                                                    <option value="">Grueso</option>
+                                                                </select></br>
+                                                                <label for="colorT">Color</label></br>
+                                                                <select name="colorT" id="colorT">
+                                                                    <option value="" selected>Translúcido</option>
+                                                                    <option value="">Amarillo</option>
+                                                                    <option value="">Anaranjado</option>
+                                                                    <option value="">Marrón</option>
+                                                                    <option value="">Otro</option>
+                                                                </select></br>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label for="observacionesT">Observaciones</label></br>
+                                                                <textarea name="" id=""></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <h6>Estado de conservación</h6>
+                                                        <label for="">Estado:
+                                                            <label for=""><input type="radio" name="Bueno" id=""> Bueno</label>
+                                                            <label for=""><input type="radio" name="Bueno" id=""> Malo</label>
+                                                            <label for=""><input type="radio" name="Bueno" id=""> Regular</label>
+                                                        </label>
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Suciedad</label></br>
+                                                                <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Manchas</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label> <input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Microorganismos</label></br>
+                                                                <div class="contenido" style="display: none;"><textarea name=" " ></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" class="describir" value="craqueles"> Craqueles</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Faltantes</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Desprencimientos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Alteración cromática</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Migración de pigmentos</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Pasmados</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                                <label><input type="checkbox" name="estadoCapaPic" id="" class="describir" value="craqueles"> Otros</label></br>
+                                                                <div class="contenido"  style="display: none;"><textarea name=""></textarea></div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                </label>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                            
+                                <!--Datos asociados control climático-->
+                              
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                    <legend><i class="fas fa-plus-circle" id="icon5" onclick="mostrarOcultar(5)"></i> Datos asociados - Control climático</legend>
+                                </fieldset>
+                                <div class="ocultar" id="ocultar5"></div>
+                    
+                                
+                                <!--Estudios realizados-->
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                    <legend><i class="fas fa-plus-circle" id="icon6" onclick="mostrarOcultar(6)"></i> Estudios realizados</legend>
+                                    <div class="ocultar" id="ocultar6">
+                                        <div class="row">
+                                            <div class="col-6">
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Macroscopia" class="mostrarEstudio" onclick="mostrarEstudio(1)"> Macroscopía</label></br>
+                                              <div id="ocultarEstudio1" class="ocultarEstudio">
+                                                    <label for="" name="descripcionEstudio">Observaciones</label></br><textarea name="" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required ></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="microscopia" id=""onclick="mostrarEstudio(2)"> Microscopía</label></br>
+                                              <div id="ocultarEstudio2" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="luzRasante" id="" onclick="mostrarEstudio(3)"> Luz rasante</label></br>
+                                              <div id="ocultarEstudio3" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+
+                                                </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Luz transmitida" id="" onclick="mostrarEstudio(4)"> Luz trasnsmitida</label></br>
+                                              <div id="ocultarEstudio4" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Luz infraroja" id="" onclick="mostrarEstudio(5)"> Luz infraroja</label></br>
+                                              <div id="ocultarEstudio5" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+
+                                            </div>
+                                            <div class="col-6">
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Luz UV" id="" onclick="mostrarEstudio(6)"> Luz UV</label></br>
+                                              <div id="ocultarEstudio6" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Rayos x" id="" onclick="mostrarEstudio(7)"> Rayos X</label></br>
+                                              <div id="ocultarEstudio7" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía <input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Medicion PH" id="" onclick="mostrarEstudio(8)"> Medición de PH</label></br>
+                                              <div id="ocultarEstudio8" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Ensayos microquimicos a la gota" id="" onclick="mostrarEstudio(9)"> Ensayos microquímicos a la gota /tinción</label></br>
+                                              <div id="ocultarEstudio9" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                              <label for=""><input type="checkbox" name="tipoEstudio" value="Analisis simples" id="" onclick="mostrarEstudio(10)"> Análisis simples</label></br>
+                                              <div id="ocultarEstudio10" class="ocultarEstudio">
+                                                    <label for="">Observaciones</label></br><textarea name="descripcionEstudio" id="" class="estilosTxa"></textarea>
+                                                    <label class="form-label"> Fotografía<input type="file" class="form-control estilosI" name="imagenEstudio" id="" required></label></br>
+                                              </div>
+                                              
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!--Restauración-->
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                    <legend><i class="fas fa-plus-circle" id="icon7" onclick="mostrarOcultar(7)"></i> Restauración- propuesta de tratamiento</legend>
+                                    <div class="ocultar" id="ocultar7">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label>Propuesta de tratamiento </br><textarea name="propuestaTratamiento" id="" class="areaGrande"></textarea></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-1" id="i">
+                                                <p></p>
+                                                <p></p>
+                                                <i class="fas fa-plus-circle agregaPaso" onclick="agregarPaso()"></i></br>
+                                            </div>
+                                            <div class="col-3" id="paso">
+                                                <label>Paso n°</br> <input type="number" name="paso" id="" maxlength="10" required></label></br>
+                                            </div>
+                                            <div class="col-4" id="tratamiento">
+                                                <label>Tratamiento</br><input type="name" name="tratamiento" id="" maxlength="50" required></label></br>
+                                            </div>
+                                            <div class="col-4" id="producto">
+                                                <label>Producto</br><input type="name" name="producto" id="" maxlength="50" required></label></br>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>En caso de intervenciones previas cargar informe de la restauración:</p>
+                                                <label class="form-label"> Informe<input type="file" class="form-control estilosI" name="informeRestauracion" id="" required ></label></br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                
+                                <!--Responsable-->
+                                <fieldset class="shadow p-3 mb-3 bg-white rounded">
+                                    <legend><i class="fas fa-plus-circle" id="icon8" onclick="mostrarOcultar(8)"></i> Responsable</legend>
+                                    <div class="ocultar" id="ocultar8">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label>Identificación de ususario</br> <input type="number" name="idUsuarioR" id="" maxlength="10" required> </label></br>
+                                                <label>Nombre</br> <input type="name" name="nombreR" id="" maxlength="50" required> </label></br>
+                                                <label>Apellido</br> <input type="name" name="apellidoR" id="" maxlength="50" required> </label></br>
+                                            </div>
+                                            <div class="col-6">
+                                                <label>Cargo</br> <input type="name" name="cargoR" id="" maxlength="50" required> </label></br>
+                                                <label>Fecha</br> <input type="date" name="fechaR" id="" required> </label></br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <!--Desabilitar botón lugo de dar click-->
+                                <input type="button" value="Enviar" onclick="this.disabled=true; this.value='Enciando...'; this.form.submit()" />
+
+
+                                <button class="btn btn-primary" type="submit" disabled>
+                                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                            
+                            </form>
+                            
+                        
+                          
+                    </div>
+                </div>
+                
+            </div>
+
+            
+        </div>
+
+    
+
+
+        <!--Botón flotante pdf-->
+
+        <a href="#" type="button" class="flotante"><i class="fas fa-file-pdf" id="btnFlotantePdf"></i></a>
+    </div>
+        
+
+
+    
+        
+
+    <!--VÍNCULOS SCRIPT-->
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Archivo interno js-->
+    <script src="js/acciones.js"></script>
+    <script src="js/cargar_menu.js"></script>
+    <!-- Iconos-->
+    <script src="https://kit.fontawesome.com/b1f327edcd.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

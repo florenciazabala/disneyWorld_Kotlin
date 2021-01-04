@@ -1,0 +1,502 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');
+/*********FUENTES GENERALES**********/
+h1, h2, h3, h4, h5, h6, legend, legend~i {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+p, label, option{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #F5F5F5;
+}
+
+/*********************************LOG IN***********************************************/
+#login{
+    background-image: url("../images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    height: 100%;
+}
+
+#r{
+    height: 620px;
+    margin-top: 45px;
+}
+
+#boxLogin {
+    background-color: rgba(0, 0, 0, 0.7);
+    /*justify-self: center;
+    width: 50%;*/
+    padding: 50px;
+    border-radius: 10px;
+}
+#logo {
+    width: 30%;
+    display: block;
+    margin: auto;
+    
+    
+}
+#logoMinerva{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#titulo{
+    font-size: 30px;
+    text-align: center;
+}
+
+.text{
+    color: white;
+    margin: 20px;
+}
+#l1,#l2{
+    color: white;
+    font-weight: 300;
+}
+#inicio{
+    text-transform: uppercase;
+    font-weight: 400;
+    background:  #3C98C6;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+#inicio:hover{
+    background: #084f72;
+}
+
+
+.btn {
+    min-height: 3.125rem;
+    font-weight: 600;
+}
+
+.FIndex {
+   /* min-height: 3.125rem;
+    line-height: initial;*/
+    color: white;
+    background-color:  rgba(41, 46, 53, 0.8) !important;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.FIndex:focus {
+    background-color: var(--dark-x);
+    outline: none;
+    color: white
+}
+
+
+/*********************************INICIO*****************************************/
+
+/*Sobreescribir colores boostrap*/
+:root{
+  --primary: #3C98C6;
+  --primary-dk: #629dbb;
+  --accent: #F37048;
+  --light:#d1d8e0;
+  --dark: #2A3F54 ;
+  --dark-x: rgba(31, 38, 49, 0.8);
+  --grey: #a8adad;
+}
+.bg-primary { background-color: var(--primary-dk) !important; }
+.bg-dark{background-color: var(--dark) !important;}
+.bg-dark-x { background-color: var(--dark-x); }
+.text-light{
+    color: rgb(161, 163, 168) !important;
+    font-weight: 300;
+}
+/*-----------------------SIDEBAR-------------------------------*/
+#wrapper {
+    /*display: flex;*/
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  max-width: 30%;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  box-shadow: 7px 0px 10px rgba(92, 91, 91, 0.5);
+  
+}
+#menuCarga{
+   
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  width: 70%;
+  height: 100vh;
+  overflow-y: auto;
+}
+#boxP, #boxP2, #boxP3, #boxP4, #boxP5, #boxP6, #boxP7{
+  width: 80%;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 20%; /*Solucionar proporcion sidenav y contenido principal*/
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+#logoSide{
+    max-width: 60px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+#logoMinervaS{
+    width: 45%;
+    display: block;
+    margin: auto;
+    margin-top: -25px;
+}
+.vinculo:hover{
+    background-color: #172D44 !important;
+    color: #ffffff !important;
+    /*border-bottom: 1px solid rgba(77, 182, 247, 0.596);*/
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#headerSide{
+    /*background-color: #172D44 !important;*/
+    color: #ffffff !important;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.enConstruccion{
+    color: rgba(41, 182, 248, 0.788);
+    margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/*----------------------Navabar--------------------------------*/
+#boxNav{
+    width: 100%; /*Revisar! --> Debería ajustarse automáticamente al igual que el contenido de la página*/
+    height: 60px;
+    position: fixed;
+    top: 0; 
+    right: 0;
+}
+.btn-search{
+    right: 4px;
+    top: -5px;
+}
+
+.avatar{
+    max-width: 35px;
+}
+#navbarDropdown{
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: 400;
+}
+
+#searchI{
+    background: white;
+    height: 40px;
+    color: #000;
+}
+
+/*----------------------Articulos--------------------------------*/
+.articulos{
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 1100px;
+    /*box-shadow: 0px 10px 10px -6px rgb(31, 31, 32);*/
+ }
+/*----------------------- MAPA -------------------------------*/
+
+.st0{opacity:0.9;fill:#bbbbbb;}
+.st0:hover{opacity:0.9;fill:#206BEF;}
+.st1{fill:#bbbbbb;}
+.st1:hover{fill:#206BEF;}
+.st2{opacity:0.9;fill:#bbbbbb;}
+.st2:hover{opacity:0.9;fill:#6CCCDE;}
+.st3{opacity:0.9;fill:#bbbbbb;}
+.st3:hover{opacity:0.9;fill:#F37048;}
+.st4{opacity:0.9;fill:#bbbbbb;}
+.st4:hover{opacity:0.9;fill:#B6CC58;}
+.st5{opacity:0.9;fill:#bbbbbb;}
+.st5:hover{opacity:0.9;fill:#FDBA54;}
+.st6{opacity:0.9;fill:#bbbbbb;}
+.st6:hover{opacity:0.9;fill:#F9E35F;}
+.st7{opacity:0.9;fill:#bbbbbb;}
+.st7:hover{opacity:0.9;fill:#6356AF;}
+.st8{opacity:0.9;fill:#bbbbbb;}
+.st8:hover{opacity:0.9;fill:#2F9B86;}
+.st9{fill:none;stroke:#000000;stroke-miterlimit:10;}
+.st10{fill:none;}
+
+/*----------------------- BOTON -------------------------------*/
+#btnFlotante{
+    font-size: 60px;
+    color:  #F37048;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+}
+#btnFlotante:hover{
+    transform: translateY(-10px);
+    transition: all 0.4s;
+    color: #3C98C6;
+}
+.flotante{
+    position: fixed;
+}
+
+/*----------------------- VENTANA MODAL -------------------------------*/
+#agregarForm{
+    background-color: var(--accent);
+    border: none;
+}
+
+/*********************************FORMULARIOS*****************************************/
+/*----------------------- Ocultar secciones -------------------------------*/
+.ocultar{
+    display: none;
+}
+
+/*-----iCONOS DESPLIEGUE------- */
+.fa-plus-circle, .fa-minus-circle{
+    font-size: 24px;
+    border:none;
+    color:  #F37048;
+}
+.fa-plus-circle:hover, .fa-minus-circle:hover{
+    font-size: 26px;
+    color: #3C98C6;
+}
+/*------Estilos de secciones-----------------------------------*/
+.tituloPrincipal{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+fieldset{
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 1100px;
+}
+/*------Estilos de formulario -> inputs-------------------------*/
+
+.areaGrande{
+    width: 500%;
+    height: 60px;
+}
+input[type="text"],input[type="number"],input[type="name"],input[type="date"], select{
+    width: 230px;
+    height: 30px;
+    /*background-color: rgb(225, 227, 231);
+    border: none;
+    border-radius: 3px;
+    font-family: Arial,sans-serif;
+    font-size: 14px;*/
+}
+
+/*Estilo numero de ineveNtario*/
+#inputInv{
+    width: 30px;
+    background-color: rgb(250, 229, 206);
+    border:none;
+}
+#inputInv1{
+    width: 60px;
+    background-color: rgb(247, 214, 176);
+    border:none;
+}
+#inputInv2{
+    width: 120px;
+    background-color: rgb(247, 214, 176);
+    border:none;
+}
+
+/*Seccion Estado de conservacion*/
+#tejidoImg{
+    width: 25%;
+}
+
+#infoEstado{
+    /*width: 600px;*/
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7b39fef;
+}
+.info{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #f75c2def;
+}
+span{
+    font-weight: bold;
+}
+
+
+/*Seccion Estudios*/
+.ocultarEstudio{
+    display: none;
+}
+
+.estilosTxa{
+    width: 350px;
+    height: 50px;
+}
+.estilosI{
+    width: 350px;
+}
+
+/*Seccion Restauracion*/
+.agregaPaso{
+    margin-bottom: 30px;
+}
+
+
+
+/*----------------------- BOTON PDF -----------------------------*/
+#btnFlotantePdf{
+    font-size: 40px;
+    color: #CC0B0B;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+}
+#btnFlotantePdf:hover{
+    transform: translateY(-10px);
+    transition: all 0.4s;
+    color: #F37048;
+}
+.flotante{
+    position: fixed;
+}
+
+/* *********** Inventario *************/
+
+.buscar{
+    height: 40px;
+    width: 180px;
+    margin-left: 10px;
+}
+.buscarL{
+    height: 40px;
+    border-radius: 6px;
+    padding: 0px 10px 0px 10px;
+}
+
+.btn-outline-success{
+    background-color: #F37048;
+    border: 1px solid #F37048;
+    color: white;
+}
+
+.btn-outline-success:hover{
+    background-color: #e44c1e;
+    border: 1px solid  #e44c1e;
+    color: white;
+}
+
+#buscarInv{
+    border: 1px solid #F37048;
+}
+#busquedaG{
+    background-color: rgb(161, 160, 160);
+    border: none;
+}
+#navbarDropdownMenuLink{
+    color: black;
+}
+#tablaFicha{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#imagenFicha{
+    display: inline-block;
+    width: 16vw;
+}
+#tablaColumna1{
+    width: auto;
+}
+.tablaColumna2{
+    width: 600px;
+}
+#busquedaAvanzada{
+    background-color: rgb(219, 226, 226);
+    border-radius: 6px;
+}
+/*************** Usuario ***************/
+#imagenUsuario{
+    max-width: 14vw;
+}
+
+.datoUsuario{
+    font-family:'Ralewey', sans-serif;
+    color: gray;
+    height: 10vh;
+}
+
+#tablaUsuario{
+    width: 90%;
+}
+#editarPerfil{
+    border: 1px solid  rgba(41, 182, 248, 0.788);
+    color:  rgba(41, 182, 248, 0.788);
+    background-color: transparent;
+    width: 14vw;
+    margin-top: 30px;
+}
+#editarPerfil:hover{
+    background-color: rgba(41, 182, 248, 0.788);
+    color: white;
+}
+
+#datosU, #datosI{
+    width: 90%;
+}
+
+.salaN{
+    width: 50px !important;
+}
+
